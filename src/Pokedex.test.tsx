@@ -3,21 +3,11 @@ import { Pokedex } from './Pokedex'
 import pokemon from './pokemon.json'
 
 describe('Pokédex', () => {
-  it('muestra el pokemon Bulbasaur', () => {
-    // Arrange
-
-    // Act
-    render(<Pokedex />)
-
-    // Assert
-    expect(screen.getByText(/bulbasaur/i)).toBeInTheDocument()
-  })
-
-  it('muestra un listado de pokemon', () => {
+  it('muestra un listado de pokemon', async () => {
     render(<Pokedex />)
 
     for (let result of pokemon.results) {
-      expect(screen.getByText(result.name)).toBeInTheDocument()
+      expect(await screen.findByText(result.name)).toBeInTheDocument()
     }
   })
 })
