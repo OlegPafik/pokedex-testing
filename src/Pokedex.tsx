@@ -3,10 +3,10 @@ import pokemon from './pokemon.json'
 
 export const Pokedex: React.FC = () => {
   return (
-    <div>
+    <ul>
       {pokemon.results.map(({ name }) => (
-        <p> {name} </p>
+        <li> {name} </li>
       ))}
-    </div>
+    </ul>
   )
 }
