@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import { Pokedex } from './Pokedex'
-import pokemons from './pokemon.json'
+import pokemon from './pokemon.json'
 
 describe('Pokédex', () => {
-  it('shows all pokemon', () => {
+  it('muestra todos los nombres de los pokemon', () => {
     render(<Pokedex />)
-    pokemons.results.forEach(({ name }) => {
+
+    pokemon.results.forEach(({ name }) => {
       expect(screen.getByText(name)).toBeInTheDocument()
     })
   })
