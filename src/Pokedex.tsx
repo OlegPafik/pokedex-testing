@@ -5,6 +5,7 @@ export const Pokedex: React.FC = () => {
     <div>
       <div>bulbasaur</div>
       <div>ivysaur</div>
+      <div>venusaur</div>
     </div>
   )
 }
