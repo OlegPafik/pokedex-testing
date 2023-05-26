@@ -3,7 +3,7 @@ import { Pokedex } from './Pokedex'
 import pokemon from './pokemon.json'
 
 describe('Pokédex', () => {
-  it('muestra todos los nombres de los pokemon', () => {
+  it('muestra todos los nombres de los pokemon', async () => {
     render(<Pokedex />)
 
     pokemon.results.forEach(({ name }) => {
