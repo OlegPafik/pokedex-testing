@@ -6,7 +6,7 @@ export const Pokedex: React.FC = () => {
   return (
     <div>
       {pokemonsList.map((pokemon) => (
-        <div> {pokemon.name} </div>
+        <p> {pokemon.name} </p>
       ))}
     </div>
   )
